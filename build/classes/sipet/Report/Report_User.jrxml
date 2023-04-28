@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b36d6dc3-f8a2-40f0-9685-b28908eef0b1">
+	<property name="ireport.zoom" value="1.4641000000000015"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="48"/>
+	<queryString>
+		<![CDATA[select * from user]]>
+	</queryString>
+	<field name="username" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_user" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="password" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="109" splitType="Stretch">
+			<staticText>
+				<reportElement x="129" y="10" width="339" height="31" uuid="cb2d9201-7b38-41c3-88a8-a28ef393d7af"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PETSHOP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="60" width="339" height="20" uuid="58a2a529-9326-4964-9eff-42b8fcd4eec6"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Kel. Kelapa Dua Wetan  Kec Ciracas Jakarta Timur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="80" width="339" height="20" uuid="94be5a4d-2f5a-473d-af09-532b24e661ef"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Telp / WA : 0851-5661-0428]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="41" width="339" height="19" uuid="1d9ca9a4-5647-4773-aa8d-9b1bfaf7b469"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Jalan Nangka Growong No 32 RT 12 RW 08]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="100" width="555" height="1" uuid="dbf2301b-e30d-4fd0-b4f8-7ec80662877b"/>
+			</line>
+			<image>
+				<reportElement x="42" y="10" width="87" height="89" uuid="c33ab6c4-985d-4eb9-9f00-56d4def8fd67"/>
+				<imageExpression><![CDATA["C:\\Users\\Adam\\Documents\\NetBeansProjects\\SIPET\\src\\sipet\\Gambar\\logo_nanggrow_petshhop.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="555" height="19" uuid="cfa57cde-34fa-41b1-a84c-c7b1f0cb03c7"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA USER]]></text>
+			</staticText>
+			<line>
+				<reportElement x="69" y="21" width="399" height="1" uuid="aa45e641-82c8-4402-a618-ef6bd52e77c8"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="77" y="0" width="129" height="20" uuid="9fb62c06-b2ff-4e17-aec6-6d3d9677405c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Username]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="0" width="158" height="20" uuid="a4632d4f-f1ba-439a-84f7-83fa795c84c8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama User]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="364" y="0" width="146" height="20" uuid="04c43d38-3517-44b6-a662-6e74c3098a11"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Password]]></text>
+			</staticText>
+			<line>
+				<reportElement x="69" y="22" width="399" height="1" uuid="15d1a939-cf03-4219-a280-c9873f77f39d"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="77" y="0" width="129" height="20" uuid="b4cf4970-621a-42e2-a5e5-3d92f3980be2"/>
+				<textFieldExpression><![CDATA[$F{username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="0" width="158" height="20" uuid="e368e8e4-592d-4846-aa12-82cef93e2427"/>
+				<textFieldExpression><![CDATA[$F{nama_user}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="364" y="0" width="146" height="20" uuid="c101b463-4184-4927-862c-d9d5a70268a9"/>
+				<textFieldExpression><![CDATA[$F{password}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="35" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="139" splitType="Stretch">
+			<staticText>
+				<reportElement x="371" y="23" width="139" height="20" uuid="475a0e0d-1432-4e25-a10d-adf5c6809cfe"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Pemilik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="100" width="139" height="20" uuid="b2be24e0-4800-4839-8d75-c013140a90a3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nurhani]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="410" y="3" width="131" height="20" uuid="9cf50f4a-6da6-441e-8828-08060a82c0c7"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="371" y="3" width="39" height="20" uuid="65146cb8-2b9b-414a-b1e3-e0b5a70fc110"/>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

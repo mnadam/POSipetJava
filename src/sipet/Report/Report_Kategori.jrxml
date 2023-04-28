@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bd26b005-e375-43d7-8e1a-67ca3cb7642e">
+	<property name="ireport.zoom" value="1.9487171000000099"/>
+	<property name="ireport.x" value="310"/>
+	<property name="ireport.y" value="177"/>
+	<queryString>
+		<![CDATA[select * from  kategori]]>
+	</queryString>
+	<field name="id_kategori" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_kategori" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement x="129" y="60" width="339" height="20" uuid="d0c89870-8b08-47ed-9484-6d1308a1e969"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Kel. Kelapa Dua Wetan  Kec Ciracas Jakarta Timur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="41" width="339" height="19" uuid="4a0b94a9-e0e2-44f7-ac16-d0d32250c3ae"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Jalan Nangka Growong No 32 RT 12 RW 08]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="10" width="339" height="31" uuid="b512820c-1360-44b9-8cd7-7f96fe29f197"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PETSHOP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="80" width="339" height="20" uuid="0945b7ad-1315-451b-95e6-274c43cd182d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Telp / WA : 0851-5661-0428]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="100" width="555" height="1" uuid="aaea8b0e-5bbd-4335-94f2-c3d51946518e"/>
+			</line>
+			<image>
+				<reportElement x="42" y="10" width="87" height="89" uuid="8d4614cd-0ba0-4e98-a870-deba6aeaf352"/>
+				<imageExpression><![CDATA["C:\\Users\\Adam\\Documents\\NetBeansProjects\\SIPET\\src\\sipet\\Gambar\\logo_nanggrow_petshhop.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="19" uuid="0bb67336-e46b-4e46-87d7-09a445870a36"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA KATEGORI]]></text>
+			</staticText>
+			<line>
+				<reportElement x="161" y="21" width="241" height="1" uuid="4b2d6657-ec04-4194-a53c-61f94b9f6fe7"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="187" y="1" width="100" height="20" uuid="9a6781a0-5af2-4ada-8108-997d73629cb7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Kategori]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="287" y="0" width="115" height="20" uuid="38b37b57-bcd8-4a6e-b34c-c9344b57c4e3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Kategori]]></text>
+			</staticText>
+			<line>
+				<reportElement x="161" y="21" width="241" height="1" uuid="f4f6c190-81a7-4464-85de-90c7ca4f72ac"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="287" y="2" width="115" height="20" uuid="626e5a65-4f1e-4139-85e9-42dbee83d150"/>
+				<textFieldExpression><![CDATA[$F{nama_kategori}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="187" y="2" width="100" height="20" uuid="8ade6f31-d4c8-419c-96ee-430c84d7a7cd"/>
+				<textFieldExpression><![CDATA[$F{id_kategori}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="24" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="22" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="135" splitType="Stretch">
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="387" y="18" width="139" height="20" uuid="9122a204-cd3b-4257-80b5-21ee2b38e58a"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="348" y="38" width="139" height="20" uuid="d63238ae-572f-4366-9d2a-d5449ed7f356"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Pemilik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="348" y="18" width="39" height="20" uuid="c4b84d1c-1192-4581-a1bb-dcea9459d1a2"/>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="348" y="115" width="139" height="20" uuid="b9240190-28ff-4a8d-b07c-7cda49355330"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nurhani]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

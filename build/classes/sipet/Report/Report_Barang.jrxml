@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c50e4f52-bae6-4d39-bfa7-06713a0e1ffe">
+	<property name="ireport.zoom" value="1.4641000000000042"/>
+	<property name="ireport.x" value="115"/>
+	<property name="ireport.y" value="144"/>
+	<subDataset name="Sipet" uuid="f9043038-2b91-4f97-b37a-32602dab44c3">
+		<queryString language="SQL">
+			<![CDATA[select * from barang as a inner join kategori as b on a.id_kategori=b.id_kategori]]>
+		</queryString>
+		<field name="id_barang" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="nama_barang" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="harga" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="stok" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="id_kategori" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="nama_kategori" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<queryString>
+		<![CDATA[select * from barang as a inner join kategori as b on a.id_kategori=b.id_kategori]]>
+	</queryString>
+	<field name="id_barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stok" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_kategori" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_kategori" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="98" splitType="Stretch">
+			<staticText>
+				<reportElement x="177" y="0" width="339" height="31" uuid="85aaf532-cf65-4379-8178-e66ae2392df5"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PETSHOP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="31" width="339" height="19" uuid="9411057c-14a9-4485-8492-47111d9ccb64"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Jalan Nangka Growong No 32 RT 12 RW 08]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="50" width="339" height="20" uuid="7a41ecfe-d1c0-4450-89dc-83212d03ea09"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Kel. Kelapa Dua Wetan  Kec Ciracas Jakarta Timur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="70" width="339" height="20" uuid="19b3d87b-6177-4fb9-946c-b64ba364b09f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Telp / WA : 0851-5661-0428]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="89" width="555" height="1" uuid="455a551a-582f-407e-9ce4-69e6f048f600"/>
+			</line>
+			<image>
+				<reportElement x="90" y="1" width="87" height="89" uuid="d1981d26-a7e0-4a99-a628-e44caf94c58a"/>
+				<imageExpression><![CDATA["C:\\Users\\Adam\\Documents\\NetBeansProjects\\SIPET\\src\\sipet\\Gambar\\logo_nanggrow_petshhop.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="19" uuid="541dcbb0-2368-4da9-b7d2-f70cbc72f6e8"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA BARANG]]></text>
+			</staticText>
+			<line>
+				<reportElement x="44" y="25" width="457" height="1" uuid="ef020b37-3dfe-426c-9cb4-b9e2f2c2a6ee"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="44" y="0" width="85" height="20" uuid="a0c02425-56fa-4d3e-9680-f481e6886ae5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="0" width="172" height="20" uuid="b202acdf-939c-4484-ab48-1003e56efe5b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="0" width="72" height="20" uuid="c3146e92-3e7a-4e3f-b603-b5f72e6f957b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="0" width="100" height="20" uuid="9b8fd66e-9e53-4806-b564-a7866baae08e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kategori]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="473" y="0" width="28" height="20" uuid="e086a106-7709-4002-819d-45d77dacf695"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stok]]></text>
+			</staticText>
+			<line>
+				<reportElement x="44" y="21" width="457" height="1" uuid="1b359d63-2651-48e8-a37f-52a376cbbe79"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="129" y="0" width="172" height="20" uuid="5a61d481-5838-44d9-a9b3-8e724c9653f9"/>
+				<textFieldExpression><![CDATA[$F{nama_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="0" width="72" height="20" uuid="33b5b3e0-3788-433e-9675-41c7e5c08f5e"/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="373" y="0" width="100" height="20" uuid="6d3ec74c-c585-4bc2-8213-9042ddd8ce41"/>
+				<textFieldExpression><![CDATA[$F{nama_kategori}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="473" y="0" width="28" height="20" uuid="39718453-b2b4-4ff0-9b80-5e2384b09a38"/>
+				<textFieldExpression><![CDATA[$F{stok}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="44" y="0" width="85" height="20" uuid="58c9de8a-7a84-4b69-8b00-dc27f58476ce"/>
+				<textFieldExpression><![CDATA[$F{id_barang}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="16" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="135" splitType="Stretch">
+			<staticText>
+				<reportElement x="362" y="24" width="139" height="20" uuid="3756538b-11ac-4351-a952-a70616d7e113"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Pemilik]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="401" y="4" width="129" height="20" uuid="a4c47a31-d596-4aa0-bdb8-2e634f141687"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="362" y="101" width="139" height="20" uuid="6680751f-1117-46c2-94e8-7602c453c138"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nurhani]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="4" width="39" height="20" uuid="d4a4de31-f1be-4a91-9d52-b8c77cbad023"/>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
